@@ -30,7 +30,7 @@ object TcpFrontmanBuild extends Build {
 }
 
 object ProjectSettings {
-  val ProjectVersion = "1.0"
+  val ProjectVersion = "0.1"
   val ScalaVersion = "2.11.7"
 
   lazy val buildSettings = Seq(
