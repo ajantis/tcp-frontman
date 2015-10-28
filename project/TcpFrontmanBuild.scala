@@ -70,12 +70,16 @@ object Dependencies {
   val scalaTestV  = "2.2.4"
 
   object Compile {
-    val netty = "io.netty"  % "netty-all" % nettyV  % "compile"
+    val netty = "io.netty"          % "netty-all"   % nettyV  % "compile"
+    val scopt = "com.github.scopt"  %% "scopt"      % "3.3.0"
   }
 
   object Test {
     val scalatest = "org.scalatest"     %% "scalatest"      % scalaTestV   % "test"
   }
 
-  val tcpFrontman = Seq(Compile.netty, Test.scalatest)
+  val tcpFrontman = Seq(
+    Compile.netty,
+    Compile.scopt,
+    Test.scalatest)
 }
